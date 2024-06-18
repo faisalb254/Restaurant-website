@@ -1,0 +1,505 @@
+*{
+    font-family: "Ubuntu Mono", monospace;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    margin: 0px;
+}
+h1{
+    font-family: "Dancing Script", cursive;
+}
+
+#home{
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/background1.jpg);
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+nav{
+    width: 70%;
+    position: fixed;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1{
+    margin: 0px;
+}
+nav h1 a{
+    font-weight: lighter;
+    color: white;
+    font-family: "Dancing Script", cursive;
+}
+nav li{
+    color: white;
+    display: inline;
+    margin-left: 50px;
+    font-size: 17px;
+}
+nav li a{
+    color: #ffffff;
+}
+/* #home nav{
+    width: 70%;
+    position: fixed;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home nav h1{
+    margin: 0px;
+}
+#home nav h1 a{
+    font-weight: lighter;
+    color: white;
+    font-family: "Dancing Script", cursive;
+}
+#home nav li{
+    color: white;
+    display: inline;
+    margin-left: 50px;
+    font-size: 17px;
+}
+#home nav li a{
+    color: #ffffff;
+} */
+
+#home .content{
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+}
+#home .content h1{
+    font-family: "dancing script", cursive;
+    font-size: 60px;
+    text-shadow: 0 0 10px black;
+    margin-bottom: 30px;
+    border-right: 1px solid white;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: text 4s ease-in-out infinite forwards;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes text {
+    0%{
+        width: 0ch;
+    }    
+    50%{
+        width: 22ch;
+    }    
+    100%{
+        width: 0ch;
+    }    
+}
+
+#home .content p{
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px black;
+} 
+#home .content button{
+    color: #ffffff;
+    border: 1px solid white;
+    height: 60px;
+    width: 180px;
+    background-color: transparent;
+    font-size: 17px;
+    transition-property: all;
+    transition-duration: .2s;
+}
+#home .content button:hover{
+    cursor: pointer;
+    background-color: #FFCE44;
+    font-size: 20px;
+    border: 10px solid #FFCE44;
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+#about{
+    height: 700px;
+    width: 100%;
+}
+#about .grid{
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 500px 500px;
+}
+#about .grid .left{
+    display: flex;
+    flex-flow: column;
+    padding: 70px;
+    text-align: justify;
+}
+#about .grid .left h4{
+    font-weight: lighter;
+    font-size: 30px;
+}
+#about .grid .left button{
+    height: 60px;
+    width: 180px;
+    background-color: transparent;
+    font-size: 17px;
+    transition-property: all;
+    transition-duration: .2s;
+}
+#about .grid .left button:hover{
+    cursor: pointer;
+    background-color: #FFCE44;
+    font-size: 20px;
+    border: 10px solid #FFCE44;
+    outline: 1px solid black;
+}
+#about .grid .right img{
+    width: 100%;
+    height: auto;
+}
+footer{
+    height: 150px;
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+footer li{
+    display: inline;
+}
+footer i{
+    font-size: 30px;
+    color: #ffffff;
+}
+
+
+@media (max-width: 1000px) {
+    #about .grid{
+        grid-template-columns: 70%;
+    }
+    
+}
+ /* .Login{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+/* #log{
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url(/img/log.jpeg);
+}
+
+.Login form{
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 40px;
+    color: #ffffff;
+    display: grid;
+    flex-flow: column;
+    grid-template-rows: repeat(7, 10%);
+    width: 600px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+    background: rgba(0, 0, 0, 0.575);
+    border-radius: 40px;
+}
+
+.Login form h1{
+    font-family: "Dancing Script", cursive;
+    font-size: 43px;
+    margin: 0px;
+}
+.Login form input{
+    height: 50px;
+    width: 80%;
+    border-radius: 40px;
+    border: 1px solid grey;
+    background: transparent;
+    margin-left: 50px;
+    padding-left: 10px;
+    font-size: 23px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.Login form button{
+    cursor: pointer;
+    height: 50px;
+    width: 180px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    margin-left: 150px;
+    
+}
+.Login form .sign a{
+    align-self: flex-start;
+    color: red;
+    font-family: cursive;
+    cursor: pointer;
+}  */
+
+#gallery{
+    height: 700px;
+    width: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url(/img/skyline.jpg);
+}
+#gallery .box{
+    /* width: 100%; */
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden;
+}
+#gallery .box h1{
+    text-align: center;
+}
+#gallery .box h2{
+    text-align: center;
+}
+#gallery .box p{
+    width: 500px;
+    text-align: center;
+}
+#gallery .box .box1{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: no1 4s infinite ease;
+}
+#gallery .box .box2{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: no2 4s infinite ease;
+    margin-left: 100%;
+}
+
+
+@keyframes no1 {
+    0%{
+        margin-left: 0%;
+    }
+    70%{
+        margin-left: -100%;
+    }
+    100%{
+        margin-left: -100%;
+    }
+}
+@keyframes no2 {
+    0%{
+        margin-left: 100%;
+    }
+    70%{
+        margin-left: 0%;
+    }
+    100%{
+        margin-left: 0%;
+    }
+}
+.gallerybox{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+.gallerybox h1{
+    font-family: "dancing script", cursive;
+    font-size: 45px ;
+}
+.gallerybox img{
+    width: 300px;
+    height: 300px;
+}
+
+
+#menu{
+    height: 600px;
+    width: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url(/img/menu.jpg);
+}
+
+.menuitems{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    height: 500px;
+}
+.menuitems h1{
+    font-size: 50px;
+    font-family: "dancing script", cursive;
+    margin-bottom: 0px;
+}
+.menuitems p{
+    margin-top: 0px;
+}
+.menulist{
+    display: flex;
+    flex-flow: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 600px;
+}
+
+.menulist h1{
+    font-family: "dancing script", cursive;
+    font-size: 50px ;
+}
+
+#blog{
+    height: 600px;
+    width: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-image: url(/img/blogback.jpg);
+}
+.blogbody{
+    display: flex;
+    flex-flow: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 1700px;
+}
+.blogbody h1{
+    font-family: "dancing script", cursive;
+    font-size: 50px ;
+}
+
+
+#log{
+    background-image: url(/img/log.jpeg);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    /* align-items: center; */
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+/* .Login form{
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 40px;
+    color: #ffffff;
+    display: grid;
+    flex-flow: column;
+    grid-template-rows: repeat(7, 10%);
+    width: 600px;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+    background: rgba(0, 0, 0, 0.575);
+    border-radius: 40px;
+} */
+
+.Login form{
+    margin-top: 100px;
+    padding-top: 60px;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.575);
+    border: 2px solid grey;
+    border-radius: 40px;
+    width: 500px;
+    height: 500px;
+}
+form h1{
+    font-size: 43px;
+    margin: 0px;
+}
+
+form input{
+    margin-top: 15px;
+    width: 80%;
+    height: 50px;
+    border-radius: 40px;
+    background: transparent;
+    border: 1px solid grey;
+    font-size: 23px;
+    padding-left: 10px;
+    color: #ffffff;
+    transition: all;
+    transition-duration: 0.5s;
+    outline: none;
+}
+form input:focus{
+    background: rgba(0, 0, 0, 0.52);
+    border: #FFCE44;
+    box-shadow: 0 0 10px #FFCE44;
+}
+
+form button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 180px;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+form button:hover{
+    cursor: pointer;
+    background-color: #FFCE44;
+    font-size: 20px;
+    border: 10px solid #FFCE44;
+    outline: 1px solid rgb(255, 255, 255);
+}
+form .sign a{
+    color: red;
+    font-family: cursive;
+    cursor: pointer;
+} 
+
+
+.signup form{
+    margin-top: 50px;
+    padding-top: 40px;
+    color: #ffffff;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.575);
+    border: 2px solid grey;
+    border-radius: 40px;
+    width: 600px;
+    height: 700px;
+}

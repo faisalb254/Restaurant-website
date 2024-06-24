@@ -45,32 +45,6 @@ nav li{
 nav li a{
     color: #ffffff;
 }
-/* #home nav{
-    width: 70%;
-    position: fixed;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#home nav h1{
-    margin: 0px;
-}
-#home nav h1 a{
-    font-weight: lighter;
-    color: white;
-    font-family: "Dancing Script", cursive;
-}
-#home nav li{
-    color: white;
-    display: inline;
-    margin-left: 50px;
-    font-size: 17px;
-}
-#home nav li a{
-    color: #ffffff;
-} */
 
 #home .content{
     color: #ffffff;
@@ -132,20 +106,28 @@ nav li a{
 }
 #about .grid{
     height: 100%;
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 500px 500px;
 }
+#about .grid .gridcont{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row;
+}
+
 #about .grid .left{
     display: flex;
     flex-flow: column;
-    padding: 70px;
+    padding: 30px;
     text-align: justify;
 }
 #about .grid .left h4{
     font-weight: lighter;
-    font-size: 30px;
+    font-size: 26px;
+    margin: 0%;
 }
 #about .grid .left button{
     height: 60px;
@@ -162,6 +144,10 @@ nav li a{
     border: 10px solid #FFCE44;
     outline: 1px solid black;
 }
+#about .grid .right{
+    width: 59%;
+}
+
 #about .grid .right img{
     width: 100%;
     height: auto;
@@ -182,7 +168,10 @@ footer i{
     font-size: 30px;
     color: #ffffff;
 }
-
+footer i:hover{
+    cursor: pointer;
+    color: #FFCE44;
+}
 
 @media (max-width: 1000px) {
     #about .grid{
@@ -190,76 +179,6 @@ footer i{
     }
     
 }
- /* .Login{
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-
-/* #log{
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    background-image: url(/img/log.jpeg);
-}
-
-.Login form{
-    text-align: center;
-    margin-top: 80px;
-    padding-top: 40px;
-    color: #ffffff;
-    display: grid;
-    flex-flow: column;
-    grid-template-rows: repeat(7, 10%);
-    width: 600px;
-    height: 700px;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid grey;
-    background: rgba(0, 0, 0, 0.575);
-    border-radius: 40px;
-}
-
-.Login form h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 43px;
-    margin: 0px;
-}
-.Login form input{
-    height: 50px;
-    width: 80%;
-    border-radius: 40px;
-    border: 1px solid grey;
-    background: transparent;
-    margin-left: 50px;
-    padding-left: 10px;
-    font-size: 23px;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #ffffff;
-}
-
-.Login form button{
-    cursor: pointer;
-    height: 50px;
-    width: 180px;
-    background: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    margin-left: 150px;
-    
-}
-.Login form .sign a{
-    align-self: flex-start;
-    color: red;
-    font-family: cursive;
-    cursor: pointer;
-}  */
 
 #gallery{
     height: 700px;
@@ -270,15 +189,35 @@ footer i{
     align-items: center;
     background-image: url(/img/skyline.jpg);
 }
-#gallery .box{
+#gallery .box {
     /* width: 100%; */
+    width: 40%;
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
     overflow: hidden;
+    /* white-space: nowrap; */
 }
+#gallery .box .box1{
+    position: relative;
+    animation: galler 4s ease  infinite;
+}
+
+@keyframes galler {
+    0%{
+        margin-left: 1100px;
+    }
+    50%{
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: -1100px;
+    }
+}
+
+
 #gallery .box h1{
     text-align: center;
 }
@@ -289,39 +228,90 @@ footer i{
     width: 500px;
     text-align: center;
 }
-#gallery .box .box1{
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: no1 4s infinite ease;
+
+#gallery .dis{
+    margin-top: 100px;
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#gallery .box .box2{
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-    animation: no2 4s infinite ease;
-    margin-left: 100%;
+#gallery .dis .img1{
+    /* display: block; */
+    height: 650px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.11px solid grey;
+    background: rgba(0, 0, 0, 0.342);
+    flex-wrap: wrap;
+}
+.left{
+    width: 45%;
+}
+.left img{
+    width: 80%;
+    border-radius: 100%;
+    padding-left: 30px;
+}
+.right{
+    width: 55%;
+    color: #ffffff;
+}
+.right h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.right h3{
+    color: grey;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.right button{
+    color: #ffffff;
+    border: 1px solid white;
+    height: 60px;
+    width: 180px;
+    background-color: transparent;
+    font-size: 17px;
+    transition-property: all;
+    transition-duration: .2s;
+}
+.right button:hover{
+    cursor: pointer;
+    background-color: #FFCE44;
+    font-size: 20px;
+    border: 10px solid #FFCE44;
+    outline: 1px solid rgb(255, 255, 255);
 }
 
+#gallery .dis .img2{
+    /* display: block; */
+    height: 650px;
+    width: 70%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 0.11px solid grey;
+    background: rgba(0, 0, 0, 0.342);
+    flex-wrap: wrap;
+}
 
-@keyframes no1 {
-    0%{
-        margin-left: 0%;
-    }
-    70%{
-        margin-left: -100%;
-    }
-    100%{
-        margin-left: -100%;
-    }
+#gallery .dis .img3{
+    /* display: block; */
+    height: 650px;
+    width: 70%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 0.11px solid grey;
+    background: rgba(0, 0, 0, 0.342);
+    flex-wrap: wrap;
 }
-@keyframes no2 {
-    0%{
-        margin-left: 100%;
-    }
-    70%{
-        margin-left: 0%;
-    }
-    100%{
-        margin-left: 0%;
-    }
-}
+
 .gallerybox{
     display: flex;
     flex-flow: column;
@@ -370,12 +360,49 @@ footer i{
     flex-flow: column;
     /* justify-content: center; */
     align-items: center;
-    height: 600px;
+    height: 700px;
 }
 
 .menulist h1{
     font-family: "dancing script", cursive;
     font-size: 50px ;
+}
+
+.menulist .menucontent{
+    width: 75%;
+    display: flex;
+    height: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
+.menulist .menucontent .menubox1{
+    width: 49%;
+    height: 200px;
+    border-bottom: 1px dashed grey;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+}
+.menulist .menucontent .menubox2{
+    width: 49%;
+    height: 200px;
+    border-bottom: 1px dashed grey;
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+
+}
+.menulist .menucontent h2{
+    font-size: 17px;
+    margin-bottom: 7px;
+    font-weight: lighter;
+}
+.menulist .menucontent p{
+    color: grey;
+    margin-bottom: 7px;
+}
+.menulist .menucontent h3{
+    color: #757575;
 }
 
 #blog{
@@ -386,17 +413,123 @@ footer i{
     flex-flow: column;
     align-items: center;
     background-image: url(/img/blogback.jpg);
+    background-size: 1900px 800px;
 }
+.blogbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    color: #ffffff;
+    flex-flow: column;
+}
+.blogbox h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.blogbox p{
+    margin: 0%;
+}
+
 .blogbody{
     display: flex;
     flex-flow: column;
     /* justify-content: center; */
     align-items: center;
-    height: 1700px;
+    height: 1750px;
 }
 .blogbody h1{
     font-family: "dancing script", cursive;
     font-size: 50px ;
+}
+.blogbody .blogcomments{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+.blogbody .blogcomments .post{
+    display: flex;
+    border: 1px solid;
+    height: 250px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px grey;
+    flex-flow: column;
+    margin-bottom: 10px;
+}
+.blogbody .blogcomments .post .top{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+}
+
+.blogbody .blogcomments .post .bottom{
+    height: 50px;
+    background-color: #cecece;
+    display: flex;
+}
+.bottom .like{
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    margin-right: 10px;
+    padding-left: 30px;
+}
+.bottom .unlike{
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+}
+.bottom i{
+    cursor: pointer;
+    padding-left: 10px;
+}
+.bottom i:hover{
+    color: blue;
+}
+
+.blogbody .blogcomments .post .pfp{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pfp img{
+    width: 135px;
+    height: 120px;
+    border-radius: 100%;
+
+}
+.blogbody .blogcomments .post .postcont{
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.blogbody .blogcomments .post .postcont h6{
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: grey;
+    margin-top: 0px;
+    font-weight: lighter;
+}
+.blogbody .blogcomments .post .postcont h3{
+    cursor: pointer;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    font-weight: lighter;
+}
+.blogbody .blogcomments .post .postcont .email{
+    cursor: pointer;
+}
+.blogbody .blogcomments .post .postcont p{
+    margin: 0%;
+    font-size: 18px;
 }
 
 

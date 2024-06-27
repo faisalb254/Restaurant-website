@@ -53,6 +53,7 @@ nav li a{
     align-items: center;
     flex-direction: column;
     height: 700px;
+    width: 70%;
 }
 #home .content h1{
     font-family: "dancing script", cursive;
@@ -60,7 +61,6 @@ nav li a{
     text-shadow: 0 0 10px black;
     margin-bottom: 30px;
     border-right: 1px solid white;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     animation: text 4s ease-in-out infinite forwards;
     white-space: nowrap;
     overflow: hidden;
@@ -81,6 +81,7 @@ nav li a{
     font-size: 30px;
     margin-bottom: 30px;
     text-shadow: 0 0 10px black;
+    text-align: center;
 } 
 #home .content button{
     color: #ffffff;
@@ -115,7 +116,7 @@ nav li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row;
+    flex-flow: row ;
 }
 
 #about .grid .left{
@@ -173,15 +174,9 @@ footer i:hover{
     color: #FFCE44;
 }
 
-@media (max-width: 1000px) {
-    #about .grid{
-        grid-template-columns: 70%;
-    }
-    
-}
 
 #gallery{
-    height: 700px;
+    height: 1000px;
     width: 100%;
     background-attachment: fixed;
     display: flex;
@@ -190,7 +185,6 @@ footer i:hover{
     background-image: url(/img/skyline.jpg);
 }
 #gallery .box {
-    /* width: 100%; */
     width: 40%;
     height: 600px;
     display: flex;
@@ -198,7 +192,6 @@ footer i:hover{
     align-items: center;
     color: #ffffff;
     overflow: hidden;
-    /* white-space: nowrap; */
 }
 #gallery .box .box1{
     position: relative;
@@ -230,7 +223,7 @@ footer i:hover{
 }
 
 #gallery .dis{
-    margin-top: 100px;
+    margin-top: 150px;
     height: 800px;
     width: 100%;
     display: flex;
@@ -238,8 +231,7 @@ footer i:hover{
     align-items: center;
 }
 #gallery .dis .img1{
-    /* display: block; */
-    height: 650px;
+    height: 750px;
     width: 70%;
     display: flex;
     justify-content: center;
@@ -289,7 +281,6 @@ footer i:hover{
 }
 
 #gallery .dis .img2{
-    /* display: block; */
     height: 650px;
     width: 70%;
     display: none;
@@ -301,7 +292,6 @@ footer i:hover{
 }
 
 #gallery .dis .img3{
-    /* display: block; */
     height: 650px;
     width: 70%;
     display: none;
@@ -358,7 +348,6 @@ footer i:hover{
 .menulist{
     display: flex;
     flex-flow: column;
-    /* justify-content: center; */
     align-items: center;
     height: 700px;
 }
@@ -429,18 +418,19 @@ footer i:hover{
 }
 .blogbox p{
     margin: 0%;
+    text-align: center;
 }
 
 .blogbody{
     display: flex;
     flex-flow: column;
-    /* justify-content: center; */
     align-items: center;
     height: 1750px;
 }
 .blogbody h1{
     font-family: "dancing script", cursive;
     font-size: 50px ;
+    text-align: center;
 }
 .blogbody .blogcomments{
     display: flex;
@@ -463,7 +453,7 @@ footer i:hover{
     height: 200px;
     display: flex;
     justify-content: center;
-    /* align-content: center; */
+    align-items: center;
 }
 
 .blogbody .blogcomments .post .bottom{
@@ -539,27 +529,10 @@ footer i:hover{
     width: 100%;
     display: flex;
     flex-flow: row;
-    /* align-items: center; */
     justify-content: center;
     background-attachment: fixed;
 }
 
-/* .Login form{
-    text-align: center;
-    margin-top: 80px;
-    padding-top: 40px;
-    color: #ffffff;
-    display: grid;
-    flex-flow: column;
-    grid-template-rows: repeat(7, 10%);
-    width: 600px;
-    height: 700px;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid grey;
-    background: rgba(0, 0, 0, 0.575);
-    border-radius: 40px;
-} */
 
 .Login form{
     margin-top: 100px;
@@ -635,4 +608,177 @@ form .sign a{
     border-radius: 40px;
     width: 600px;
     height: 700px;
+}
+
+.navmobi{
+    display: none;
+}
+#navlist{
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+    nav{
+        padding: 10px;
+        width: 100%;
+        background-color: black;
+    }
+    .navpc{
+        display: none;
+    }
+    .navmobi{
+        display: block;
+    }
+    #navlist{
+        margin-top: 30px;
+        width: 100%;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        color: #ffffff;
+    }
+    #navlist ul{
+        padding: 0%;
+    }
+    #navlist li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        height: 80px;
+        font-size: 25px;
+        padding: 5px;
+        border: 1px solid;
+        color: white;
+        border: none;
+        border-top: 1px dotted grey;
+    }
+    
+    #navlist a{
+        color: white;
+    }
+
+    nav button{
+        background: none;
+        color: #ffffff;
+        border: none;
+    }
+    nav i{
+        font-size: 30px;
+    }
+    #home .content h1{
+        animation: none;
+        white-space: wrap;
+        text-align: center;
+        border: none;
+    }
+    #about .grid .gridcont{
+        width: 100%;
+        flex-flow: column;
+        height: 1000px;
+    }
+    #about{
+        height: 1000px;
+    }
+    footer{
+        width: 100vw;
+    }
+    .blogbody{
+        height: 2400px;
+    }
+
+    .blogbody .blogcomments{
+        width: 100%;
+    }
+    .blogbody .blogcomments .post{
+        height: 350px;
+    }
+    .blogbody .blogcomments .post .top{
+        height: 400px;
+        flex-flow: column wrap;
+    }
+    .blogbody .blogcomments .post .bottom{
+        justify-content: space-around;
+    }
+    .blogbody .blogcomments .post .postcont{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .signup form{
+        margin-top: 70px;
+    }
+    #log{
+        height: 850px;
+    }
+
+    .menuitems p{
+        width: 90%;
+        text-align: center;
+    }
+    #gallery .box{
+        width: 100%;
+        overflow: visible;
+    }
+    #gallery .box .box1{
+        animation: none;
+    }
+    .gallerybox{
+        height: 1200px;
+    }
+    .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+    }
+    .images a{
+        margin-bottom: 10px;
+    }
+
+    #gallery .box p{
+        width: auto;
+    }
+    .gallerybox h1{
+        font-size: 40px;
+    }
+}
+@media (max-width:620px) {
+    .signup{
+        width: 100%;
+    }
+    .signup form{
+        width: 90%;
+        margin-left: 20px;
+    }
+    #gallery{
+        height: 1100px;
+    }
+    #gallery .dis .img1{
+        flex-flow: column;
+        height: 950px;
+        width: 85%;
+    }
+    #gallery .right{
+        text-align: center;
+        width: 90%;
+    }
+    #gallery .right p{
+        width: 100%;
+    }
+}
+@media (max-width:500px) {
+    #about .grid .left{
+        width: 80%;
+    } 
+    #about .grid .right{
+        width: 70%;
+    }
+    .Login{
+        width: 100%;
+    }
+    .Login form{
+        width: 90%;
+        margin-left: 20px;
+    }
 }
